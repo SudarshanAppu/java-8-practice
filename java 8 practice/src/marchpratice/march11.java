@@ -31,8 +31,6 @@ public class march11 {
         }
         System.out.println(stringBuilder);
         // print even odd numbers
-
-
         List<Integer> list = Arrays.asList(3, 5, 6, 8,2,1,6,10);
 
                 List<Employee> employeeList = Database.database();
@@ -128,6 +126,7 @@ public class march11 {
         map.put("Assam", "India");
 //  o/p : India : 5
 
+
         List<String> lst = Arrays.asList("prsh10","sud2","pru5","lok1");
         lst.stream().sorted(Comparator.comparing(Example::extractNumber))
                 .forEach(e->System.out.println(" "+e+" "));
@@ -135,7 +134,7 @@ public class march11 {
     }
     public static int extractNum(String str ){
         String resString = str.replaceAll("\\D+","");
-        System.out.println(resString);
+        System.out.println("String value is "+resString);
         return  resString.isEmpty()?0:Integer.parseInt(resString);
     }
 }

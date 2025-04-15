@@ -3,8 +3,9 @@ package multiThreading;
 
 class SychThreadEXample{
 //    int count;
-int count;
-    public synchronized void display(){
+// volatile
+     int count;
+    public  synchronized void display(){
         count++;
     }
 

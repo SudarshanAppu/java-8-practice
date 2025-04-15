@@ -74,7 +74,7 @@ public class SearchSortingAlgo {
         }
     }
 
-    private static int binarySearch(int[] arr2, int target) {
+    static int binarySearch(int[] arr2, int target) {
         int left =0;
         int right = arr2.length-1;
         while(left<=right){

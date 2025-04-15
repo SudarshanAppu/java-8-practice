@@ -39,7 +39,9 @@ public class CollablevsRunnable {
 
         ExecutorService executor = Executors.newFixedThreadPool(2);
         Future<Integer> res =executor.submit(callable);
+        executor.execute((Runnable) callable);
         executor.submit(runnable);
+        executor.execute(runnable);
 
 
         System.out.println(" factorial from call()"+res.get());

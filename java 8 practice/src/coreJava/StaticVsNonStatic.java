@@ -15,12 +15,12 @@ public class StaticVsNonStatic {
         System.out.println("Constructor");
     }
     public static void main(String [] args){
-
-        System.out.println(" main method"+StaticVsNonStatic.number);
-
+//
+//        System.out.println(" main method :"+StaticVsNonStatic.number);
+//
         StaticVsNonStatic s1 = new StaticVsNonStatic();
         s1.number = 007;
-        System.out.println(StaticVsNonStatic.number);
+        System.out.println(" after constructor creation: "+StaticVsNonStatic.number);
         new StaticVsNonStatic().print();
 
 /*
@@ -46,4 +46,20 @@ public class StaticVsNonStatic {
                     public void print2(){
                         System.out.println("print 2 method execution");
                     }
+}
+
+ class overloading{
+
+    void m1(int str){
+        System.out.println(" m1 int");
+    }
+
+    void m1(float in){
+
+    }
+
+     public static void main(String[] args) {
+         overloading overloading = new overloading();
+     overloading.m1(1f);
+     }
 }

@@ -3,6 +3,8 @@ package marchpratice;
 import javax.swing.text.html.Option;
 import java.awt.desktop.OpenFilesEvent;
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -20,6 +22,7 @@ public class March16 {
 
 
         Integer[] nonPremArr = {4,3,2,1};
+        Arrays.stream(nonPremArr).filter(e->e%2==0).forEach(e->System.out.print(e));
         Stream<Integer> integerStream= Stream.of(nonPremArr);
         integerStream.forEach(System.out::print);
 
@@ -31,6 +34,9 @@ public class March16 {
 
 
         list.stream().map(String::toUpperCase).forEach(System.out::println);
+        String maxelement = list.stream().max(Comparator.comparing(String::length))
+                .get();
+        System.out.println(" max element "+maxelement);
 
         //reduce method to find sum , largest and smallest
 
@@ -48,7 +54,7 @@ public class March16 {
 
         System.out.println("min element witth in function:"+minelement.getAsInt());
 
-        int maxelement =Arrays.stream(premArr)
+        int maxelementq =Arrays.stream(premArr)
                 .max().getAsInt();
 
 
@@ -118,6 +124,8 @@ public class March16 {
 
         //in this intList find the repeated integeres
 //        intList
+
+
 
 
 
